@@ -14,12 +14,22 @@ public class Program {
 		
 		File path = new File(strPath);
 		
-		//vai fazer umas listagem de todas as pastas/diretórios a partir do caminho passado.
+		//listagem de todas as pastas/diretórios a partir do caminho passado.
 		File[] folders = path.listFiles(File::isDirectory);
 		
-		System.out.println("Folders: ");
+		System.out.println();
+		System.out.println("FOLDERS: ");
 		for (File folder : folders) {
 			System.out.println(folder);
+		}
+		
+		//listagem de todos os arquivos a partir do caminho passado.
+		File[] files = path.listFiles(File::isFile);
+		
+		System.out.println();
+		System.out.println("FILES: ");
+		for (File file : files) {
+			System.out.println(file);
 		}
 		
 		sc.close();
