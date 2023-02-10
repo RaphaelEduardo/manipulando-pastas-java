@@ -32,6 +32,11 @@ public class Program {
 			System.out.println(file);
 		}
 		
+		//criando uma sub pasta a partir do caminho informado.
+		boolean sucess = new File(strPath + "\\SubPasta").mkdir();
+		System.out.println();
+		System.out.println("Directory created sucessfully: " + sucess);
+		
 		sc.close();
 	}
 }
